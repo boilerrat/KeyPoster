@@ -24,7 +24,7 @@ The `KeyPosterFactory` contract serves as a factory to deploy new instances of t
 - Clone the repository
 
 ```bash
-git clone https://github.com/YourGitHubUsername/KeyPoster.git
+git clone https://github.com/boilerrat/KeyPoster.git
 ```
 
 - Navigate to the project directory
@@ -71,6 +71,8 @@ npx hardhat test
 ```
 
 ### Deployment
+
+```⚠️ Note: You do not need to do this if you you just want to store addressed in your contract. To do this, you only need to deploy a new clone of `KeyPoster` ```
 
 Deploy the contracts to the Sepolia testnet:
 
