@@ -26,6 +26,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract KeyPoster is Ownable {
     // Mapping to keep track of keys
     mapping(address => bool) private _keys;
+    mapping(address => uint256) private _keyBlockNumbers;
 
     // Array to store all keys for efficient retrieval
     address[] private _allKeys;
@@ -33,6 +34,11 @@ contract KeyPoster is Ownable {
     // Events
     event KeyAdded(address indexed key, uint256 blockNumber);
     event KeyRemoved(address indexed key);
+
+    struct KeyData {
+        address key;
+        uint256 blockNumber;
+    }
 
     /**
      * @dev Constructor that sets the initial owner.
@@ -61,6 +67,7 @@ contract KeyPoster is Ownable {
         require(!_keys[key], "Key already exists");
         require(!_isContract(key), "Key cannot be a contract address");
         _keys[key] = true;
+        _keyBlockNumbers[key] = block.number;
         _allKeys.push(key);
         emit KeyAdded(key, block.number);
     }
@@ -73,7 +80,7 @@ contract KeyPoster is Ownable {
     function removeKey(address key) external onlyOwner {
         require(_keys[key], "Key does not exist");
         _keys[key] = false;
-        
+
         // Remove the key from _allKeys array
         for (uint256 i = 0; i < _allKeys.length; i++) {
             if (_allKeys[i] == key) {
@@ -82,12 +89,9 @@ contract KeyPoster is Ownable {
                 break;
             }
         }
-
         emit KeyRemoved(key);
     }
-    /*************************************************************************************
-    *                              Public Functions                                      *
-    **************************************************************************************/
+
     /**
      * @dev Check if a Key exists.
      * @param key The Key to check.
@@ -98,10 +102,14 @@ contract KeyPoster is Ownable {
     }
 
     /**
-     * @dev Retrieve all Keys.
-     * @return address[] The list of all Keys.
+     * @dev Retrieve all Keys along with the block numbers they were added.
+     * @return KeyData[] The list of all Keys and their block numbers.
      */
-    function getAllKeys() external view returns (address[] memory) {
-        return _allKeys;
+    function getAllKeys() external view returns (KeyData[] memory) {
+        KeyData[] memory keysWithBlockNumbers = new KeyData[](_allKeys.length);
+        for (uint256 i = 0; i < _allKeys.length; i++) {
+            keysWithBlockNumbers[i] = KeyData(_allKeys[i], _keyBlockNumbers[_allKeys[i]]);
+        }
+        return keysWithBlockNumbers;
     }
 }

@@ -81,10 +81,13 @@ describe("KeyPoster Contract", function() {
   });
 
   describe("Get All Keys", function() {
-    it("Should return all added keys", async function() {
+    it("Should return all added keys along with their block numbers", async function() {
       await keyPoster.connect(owner).addKey(addr1.address);
       await keyPoster.connect(owner).addKey(addr2.address);
-      expect(await keyPoster.getAllKeys()).to.include.members([addr1.address, addr2.address]);
+
+      const keysWithBlockNumbers = await keyPoster.getAllKeys();
+      const addresses = keysWithBlockNumbers.map(tuple => tuple[0]);
+      expect(addresses).to.include.members([addr1.address, addr2.address]);
     });
   });
 });
