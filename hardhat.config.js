@@ -13,8 +13,8 @@ module.exports = {
       url: process.env.INFURA_URL_GO,
       accounts: [process.env.PRIVATE_KEY]
     },
-    opgoerli: {
-      url: process.env.INFURA_URL_OPGO,
+    mainnet: {
+      url: process.env.INFURA_URL_MAINNET,
       accounts: [process.env.PRIVATE_KEY]
     }  
   },

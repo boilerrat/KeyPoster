@@ -94,9 +94,18 @@ The `KeyPosterFactory` contract is currently deployed on Sepolia (adding more so
 
 ### Current Deployments
 
+- **Mainnet Ethereum**: [0x59433f7195a6a5d87af923F4ae6079f2bD2b126E](https://etherscan.io/address/0x59433f7195a6a5d87af923F4ae6079f2bD2b126E)
 - **Sepolia Testnet**: [0xae955Ad879A01281F8748C5c4aADC93Cba737FBf](https://sepolia.etherscan.io/address/0xae955Ad879A01281F8748C5c4aADC93Cba737FBf)
 - **Goerli Testnet**: [0x6B61A6B1ACb42387a23383919b0aEc237101301d](https://goerli.etherscan.io/address/0x6B61A6B1ACb42387a23383919b0aEc237101301d)
+
+---
+
+- **Optimisim**: [0x29eD8B18203e74Ef5A6a5a4Bd12763bAEB1aEa15](https://optimistic.etherscan.io/address/0xE7b1f55F4f61Eb913276cDfb098a28884394FC72)
 - **Optimisim Goerli**: [0x3d46E90a05146eb7f0b23F7fd2031a7ca7845C9d](https://goerli-optimism.etherscan.io/address/0x3d46E90a05146eb7f0b23F7fd2031a7ca7845C9d)
+  
+---
+
+- **Arbitrum**: [0x525F5BA8C7AFd698fD44167FefbDc4B37EdFcC55](https://arbiscan.io/address/0x525F5BA8C7AFd698fD44167FefbDc4B37EdFcC55)
 -  **Arbitrum Goerli**: [](https://goerli.arbiscan.io/address/0x21E1873EeE3dF9cB30FB9297A52dAa4F007Ca607)
 
 
