@@ -90,7 +90,7 @@ npx hardhat verify --network sepolia DEPLOYED_CONTRACT_ADDRESS
 
 ## Deployments
 
-The `KeyPosterFactory` contract is currently deployed on Sepolia (adding more soon) to allow easy creation of individual `KeyPoster` contracts. You can deploy a new `KeyPoster` by calling the `createKeyPoster` function on the deployed `KeyPosterFactory` contract.
+The `KeyPosterFactory` contract allows easy creation of individual `KeyPoster` contracts. You can deploy a new `KeyPoster` by calling the `createKeyPoster` function on the deployed `KeyPosterFactory` contract.
 
 ### Current Deployments
 
