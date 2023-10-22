@@ -11,7 +11,7 @@ module.exports = {
       accounts: [process.env.PRIVATE_KEY]
     },
     optimism: {
-      url: "https://optimism-mainnet.infura.io/v3/4dc5e84fc7e8436a9c8db205e6907e5f",
+      url: process.env.INFURA_URL_OPTIMISM,
       accounts: [process.env.PRIVATE_KEY]
     }  
   },

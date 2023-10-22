@@ -96,12 +96,15 @@ The `KeyPosterFactory` contract is currently deployed on Sepolia (adding more so
 
 - **Sepolia Testnet**: [0xae955Ad879A01281F8748C5c4aADC93Cba737FBf](https://sepolia.etherscan.io/address/0xae955Ad879A01281F8748C5c4aADC93Cba737FBf)
 - **Goerli Testnet**: [0x6B61A6B1ACb42387a23383919b0aEc237101301d](https://goerli.etherscan.io/address/0x6B61A6B1ACb42387a23383919b0aEc237101301d)
-- ** Optimisim Goerli**: []()
+- **Optimisim Goerli**: [0x3d46E90a05146eb7f0b23F7fd2031a7ca7845C9d](https://goerli-optimism.etherscan.io/address/0x3d46E90a05146eb7f0b23F7fd2031a7ca7845C9d)
+-  **Arbitrum Goerli**: [](https://goerli.arbiscan.io/address/0x21E1873EeE3dF9cB30FB9297A52dAa4F007Ca607)
+
+
 More deployments will be added as they are deployed.
 
 ### How to Deploy a New KeyPoster Using Etherscan
 
-1. Go to the Etherscan page of the deployed `KeyPosterFactory` contract. For Sepolia, [click here](https://sepolia.etherscan.io/address/0xfE1A213a0B7661829A06C8bc7d936B50b4460207#writeContract).
+1. Go to the Etherscan page of the deployed `KeyPosterFactory` contract. For Sepolia, [click here](https://sepolia.etherscan.io/address/0xfE1A213a0B7661829A06C8bc7d936B50b4460207).
 
 2. Connect your Ethereum wallet by clicking the "Connect to Web3" button.
 
