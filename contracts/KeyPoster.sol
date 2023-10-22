@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: Unlicense
 
-//  __   ___    _____  __      __  _____      ____      _____   ________    _____   ______   
-// () ) / __)  / ___/  ) \    / ( (  __ \    / __ \    / ____\ (___  ___)  / ___/  (   __ \  
-// ( (_/ /    ( (__     \ \  / /   ) )_) )  / /  \ \  ( (___       ) )    ( (__     ) (__) ) 
-// ()   (      ) __)     \ \/ /   (  ___/  ( ()  () )  \___ \     ( (      ) __)   (    __/  
-// () /\ \    ( (         \  /     ) )     ( ()  () )      ) )     ) )    ( (       ) \ \  _ 
+//  __   ___    _____  __      __  _____      ____      _____   ________    _____   ______
+// () ) / __)  / ___/  ) \    / ( (  __ \    / __ \    / ____\ (___  ___)  / ___/  (   __ \
+// ( (_/ /    ( (__     \ \  / /   ) )_) )  / /  \ \  ( (___       ) )    ( (__     ) (__) )
+// ()   (      ) __)     \ \/ /   (  ___/  ( ()  () )  \___ \     ( (      ) __)   (    __/
+// () /\ \    ( (         \  /     ) )     ( ()  () )      ) )     ) )    ( (       ) \ \  _
 // ( (  \ \    \ \___      )(     ( (       \ \__/ /   ___/ /     ( (      \ \___  ( ( \ \_))
-// ()_)  \_\    \____\    /__\    /__\       \____/   /____/      /__\      \____\  )_) \__/ 
+// ()_)  \_\    \____\    /__\    /__\       \____/   /____/      /__\      \____\  )_) \__/
 
 pragma solidity ^0.8.21;
 
@@ -53,7 +53,9 @@ contract KeyPoster is Ownable {
      */
     function _isContract(address addr) internal view returns (bool) {
         uint256 size;
-        assembly { size := extcodesize(addr) }
+        assembly {
+            size := extcodesize(addr)
+        }
         return size > 0;
     }
 
@@ -108,7 +110,10 @@ contract KeyPoster is Ownable {
     function getAllKeys() external view returns (KeyData[] memory) {
         KeyData[] memory keysWithBlockNumbers = new KeyData[](_allKeys.length);
         for (uint256 i = 0; i < _allKeys.length; i++) {
-            keysWithBlockNumbers[i] = KeyData(_allKeys[i], _keyBlockNumbers[_allKeys[i]]);
+            keysWithBlockNumbers[i] = KeyData(
+                _allKeys[i],
+                _keyBlockNumbers[_allKeys[i]]
+            );
         }
         return keysWithBlockNumbers;
     }

@@ -94,8 +94,9 @@ The `KeyPosterFactory` contract is currently deployed on Sepolia (adding more so
 
 ### Current Deployments
 
-- **Sepolia Testnet**: [0xfE1A213a0B7661829A06C8bc7d936B50b4460207](https://sepolia.etherscan.io/address/0xfE1A213a0B7661829A06C8bc7d936B50b4460207)
-
+- **Sepolia Testnet**: [0xae955Ad879A01281F8748C5c4aADC93Cba737FBf](https://sepolia.etherscan.io/address/0xae955Ad879A01281F8748C5c4aADC93Cba737FBf)
+- **Goerli Testnet**: [0x6B61A6B1ACb42387a23383919b0aEc237101301d](https://goerli.etherscan.io/address/0x6B61A6B1ACb42387a23383919b0aEc237101301d)
+- ** Optimisim Goerli**: []()
 More deployments will be added as they are deployed.
 
 ### How to Deploy a New KeyPoster Using Etherscan
